@@ -1,0 +1,16 @@
+Reto 1
+
+ URL completa:  http://127.0.0.1:5500/semana1/rueda-libre/index.html
+ El protocolo: http://
+ El host: 127.0.0.1
+ El puerto: :5500
+ la ruta: semana1/rueda-libre/index.html
+ el método de la petición: GET
+ el código de estado: 200
+
+Que codigo registra el servidor despues de cambiar la direccion que no existe: 404
+
+HTML: Nos va a servir para crear la estructura de la pagina web, como los titulos, agregar las imagenes, y la descripción.
+CSS: Crearemos el diseño y su forma, como agregarle colores y su animación dentro de la web.
+JavaScript: nos va a servir para hacer una conexión de la web al usuario, como por ejemplo las acciones que va realizar 
+la pagina web cuando el cliente interactue con ella.

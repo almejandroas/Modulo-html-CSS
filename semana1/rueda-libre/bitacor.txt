@@ -14,3 +14,7 @@ HTML: Nos va a servir para crear la estructura de la pagina web, como los titulo
 CSS: Crearemos el diseño y su forma, como agregarle colores y su animación dentro de la web.
 JavaScript: nos va a servir para hacer una conexión de la web al usuario, como por ejemplo las acciones que va realizar 
 la pagina web cuando el cliente interactue con ella.
+
+tabla de rutas relativas modulo-html-CSS/semana1/rueda-libre/index.html acá se encuentra el inicio de la pagina
+modulo-html-CSS/semana1/rueda-libre/pagina/tarifas.html acá se encuentra la tabla de tarifas
+modulo-html-CSS/semana1/rueda-libre/pagina/reservas.html acá se encuentra los horarios de reservas.

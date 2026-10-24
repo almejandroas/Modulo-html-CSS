@@ -22,11 +22,65 @@ modulo-html-CSS/semana1/rueda-libre/pagina/reservas.html acá se encuentra los h
 
 reto 2
 
+Hallazgos de accesibilidad:
+
+1. Las paginas navegan de manera correcta con el tab.
+2. Se identifica que las imagenes estaban mal enrrutadas: se organiza su ruta para cargar de manera correcta
+3. la etiqueta <nav> estaba mal aplicada, se organiza en la lista del menu, se coloca la etiqueta abriendo la lista menu.
+4. se la da nombre al tittle del head de reservas.
+5. no se identifican errores en el form, se puede navegar y enviar con el teclado.
+
+Esquema de regiones
+
+[DOCUMENTO: html lang="es"]
+│
+├── [REGIÓN: HEADER]
+│   ├── Título del sitio (H1: Rueda libre)
+│   └── [REGIÓN: NAV] (Menú de navegación)
+│       └── Lista de enlaces (Inicio, Tarifas, Reservas)
+│
+├── [REGIÓN: MAIN] (Contenido principal de la página)
+│   │
+│   ├── [INTRODUCCIÓN / BIENVENIDA]
+│   │   ├── Párrafo de bienvenida con enlace interno
+│   │   └── Imagen ilustrativa (Ciclismo extremo)
+│   │
+│   ├── [SECCIÓN: ¿QUIÉNES SOMOS?] (H2)
+│   │   └── Párrafo descriptivo de la empresa
+│   │
+│   ├── [SECCIÓN: NUESTROS SERVICIOS] (H2)
+│   │   │
+│   │   ├── [ARTÍCULO: Alquiler de bicicletas] (H3)
+│   │   │   ├── Subtítulo: Pasos para alquilar (H4)
+│   │   │   ├── Lista ordenada (Pasos 1 al 4)
+│   │   │   ├── Lista desordenada (Beneficios excelentes)
+│   │   │   ├── Imagen de muestra (Bicicleta)
+│   │   │   └── Lista de marcas (Specialized, Trek, Giant, Cannondale)
+│   │   │
+│   │   ├── [ARTÍCULO: Recorridos Guiados] (H3)
+│   │   │   ├── Párrafo descriptivo
+│   │   │   ├── Lista de tipos de recorridos (Urbanos, Extremos, etc.)
+│   │   │   └── Enlace a tarifas de recorridos
+│   │   │
+│   │   └── [ARTÍCULO: Taller Básico] (H3)
+│   │       ├── Párrafo descriptivo
+│   │       └── Imagen ilustrativa (Persona con bicicleta)
+│   │
+│   └── [SECCIÓN: ENCUÉNTRANOS] (H2 id="Encuentranos")
+│       ├── Enlace a ubicación (Google Maps - De Moda Outlet)
+│       └── Enlace de contacto por correo electrónico
+│
+└── [REGIÓN: FOOTER]
+    └── Párrafo con nombre de la marca, correo de soporte y año (2016)
+
+
+
+
 Verde Ruta: Botones y enlaces
 	
 #1E7A4F
 
-Naranja Pedal :Destacados y botones secundarios	
+Naranja Pedal : no se va a utilizar por su mala combinación con los colores del fondo y el texto secundario, se va a perder y va a difcultar la lectura del usuario.
 
 #F39A2B	
 
@@ -43,14 +97,12 @@ Gris Asfalto : Texto secundario
 #5B6470
 	
 
-
-
 Colores de aceptacion : 
-- blanco sobre Verde Ruta:pass
-- blanco sobre Naranja Pedal : fail
-- Azul Noche sobre Naranja Pedal: pass
-- Azul Noche sobre Crema : pass
-- Gris Asfalto sobre Crema: pass
-- Verde Ruta sobre Crema: pass
-- Naranja Pedal sobre Crema: fail
-- blanco sobre Azul Noche: pass
+Texto blaanco sobre verde ruta: Aceptación para que el verde sea un fondo para el blanco, contraste adecuado segun webAIM
+blanco sobre Naranja Pedal: No se puede utilizar el blanco con el naranja pedal, tiene un contraste muy bajo, se pierde las letras segun webAIM
+Azul Noche sobre Naranja Pedal: tiene un buen ratio de contraste: se pueden utilizar
+Azul Noche sobre Crema: son totalmente compatibles
+Gris Asfalto sobre Crema: es posible utilizarlo, pero su ratio es muy bajo
+Verde Ruta sobre Crema: es posible utilizarlo, pero su contraste esta al limite
+Naranja Pedal sobre Crema: No es posible hacer esa combinación ratio por debajo de 3
+blanco sobre Azul Noche: Es un ratio alto mas de 15, pasa 

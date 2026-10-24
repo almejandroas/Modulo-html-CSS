@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,54 @@
     </header>
 
     <main>
+
+        <form action ="" method = "post">
+            <fieldset>
+                <legend>Tus datos</legend>
+                    <p><label for = "nombre">Nombre completo:</label></p>
+                    <input type = "text" id = "nombre" name = "nombre" minlength="3" required>
+                    <p><label for = "identificacion">Numero de documento: </label></p>
+                    <input type = "text" id = "identificacion" name = "identificacion" pattern = "[0-9]{6,10}" required>
+                    <p><label for = "correo">Correo electrónico::</label></p>
+                    <input type = "email" id = "correo" name = "correo" required>
+                    <p><label for = "celular">Celular:</label></p>
+                    <input type = "tel" id = "celular" name = "telefono" pattern = "3[0-9]{9}" required >    
+            </fieldset>
+
+            <fieldset>
+                <legend>Reserva</legend>
+                    <p><label for = "fecha">Fecha de reserva:</label></p>
+                    <input type = "date" id = "fecha" name = "fecha" min = "2026-11-01" max = "2026-12-31" required>
+                    <p><label for = "bicicleta">Tipo de bicicleta:</label></p>
+                    <p><input type = "radio" id = "bicicleta" name = "bicicleta" value = "urbana" required>Urbana</p>
+                    <p><input type = "radio" id = "bicicleta" name = "bicicleta" value = "montaña" required>Montaña</p>
+                    <p><input type = "radio" id = "bicicleta" name = "bicicleta" value = "eléctrica" required>Eléctrica</p>
+                    <p><label for = "plan">plan:</label></p>
+                    <p><input type = "radio" id = "plan" name = "plan" value = "hora" required>1 hora</p>
+                    <p><input type = "radio" id = "plan" name = "plan" value = "medio" required>medio día</p>
+                    <p><input type = "radio" id = "plan" name = "plan" value = "completo" required>día completo</p>
+                    <p><label for = "cantidad"> ¿Cantidad de bicicletas?:</label></p>
+                    <input type = "number" id = "cantidad" name = "cantidad" min = "1" max = "6" required>
+                    <p><label for = "recorrido">Recorrido guiado:</label></p>
+                    <select id = "recorrido" name = "recorrido" required>
+                        <option value = "ninguno">Ninguno</option>
+                        <option value = "rio">rio y parques</option>
+                        <option value = "barrio">Sabores del barrrio</option>
+                        <option value = "reto">Reto Palmas</option>  
+                    </select>
+                    <p><label for = "comentarios">Comentarios:</label></p>
+                    <textarea id = "comentarios" name = "comentarios" rows = "4" cols = "50"></textarea>
+                </fieldset>
+
+                <fieldset> 
+                    <legend>Politicas de aceptación y confirmación</legend>
+                    <p><label for = "aceptacion">Acepto los términos y condiciones</label></p>
+                    <p><input type = "radio" id = "aceptacion" name = "aceptacion" value = "acepto" required> Sí, acepto</p>
+                    <button type = "submit">Confirmar Reserva</button>
+                </fieldset>
+                    
+        </form>
+
         <p>En este lugar puedes realizar tus reservas</p>
         <h2>Horario de Atencion</h2>
         <aside aria-label="contenido complementario">
@@ -27,6 +75,7 @@
             </ul>
         </aside>
     </main>
+
         <footer>
            <p>Rueda libre
             comunicate <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>

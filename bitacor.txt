@@ -106,3 +106,11 @@ Gris Asfalto sobre Crema: es posible utilizarlo, pero su ratio es muy bajo
 Verde Ruta sobre Crema: es posible utilizarlo, pero su contraste esta al limite
 Naranja Pedal sobre Crema: No es posible hacer esa combinación ratio por debajo de 3
 blanco sobre Azul Noche: Es un ratio alto mas de 15, pasa 
+
+
+reto 3
+propiedades que se heredan
+
+especificidad: menu (1,0,1) - activo (0,1,0)
+el problema de que no se active la clase, es que el menu como es un id, tiene prioridad, la solución es ser más especificos
+hora de utilizar la clase #menu a.activo{}

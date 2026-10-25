@@ -1,0 +1,96 @@
+:root{
+    --botones--enlaces: #1E7A4F;
+    --titulos--encabezados: #14213D;
+    --fondo--general: #FAF6EF;
+    --texto--secundario: #5B6470;
+    --fuente--titulos: 'Montserrat', sans-serif;
+    --fuente--texto: 'Open Sans', sans-serif;
+    --espacio:3rem;
+}
+
+body{
+    font-family: var(--fuente--texto);
+    background-color: var(--fondo--general);
+    h1,h2,h3,h4,h5,h6{
+        font-family: var(--fuente--titulos);
+        color: var(--titulos--encabezados);
+    }
+}
+
+#menu a { 
+    color: var(--texto--secundario); 
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+#menu a.activo { color: var(--botones--enlaces); font-weight: 600; }
+
+#menu a:hover { color: var(--botones--enlaces); font-weight: 600; }
+#menu a:focus { color: var(--botones--enlaces); font-weight: 600; }
+
+.cta-boton{
+    display: inline-block;
+    background-color: var(--botones--enlaces);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-boton:hover {
+    background-color: #14532d; 
+    transform: scale(1.05); 
+}
+
+.datos:focus {
+    outline: 2px solid var(--botones--enlaces);
+    outline-offset: 2px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"],
+.formulario input[type="date"],
+.formulario input[type="number"],
+.formulario select,
+.formulario textarea {
+    padding: 8px 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+/* HOVER: cuando el mouse pasa sobre el campo */
+.formulario input[type="text"]:hover,
+.formulario input[type="email"]:hover,
+.formulario input[type="tel"]:hover,
+.formulario input[type="date"]:hover,
+.formulario input[type="number"]:hover
+.formulario input[type="radio"]:hover,
+.formulario select:hover,
+.formulario textarea:hover {
+    border-color: var(--botones--enlaces);
+    background-color: var(--botones--enlaces);
+}
+
+/* FOCUS: cuando el usuario hace clic o entra con el teclado */
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario input[type="tel"]:focus,
+.formulario input[type="date"]:focus,
+.formulario input[type="number"]:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: 3px solid var(--botones--enlaces);
+    outline-offset: 2px;
+    border-color: var(--botones--enlaces);
+    background-color: #fff;
+}
+
+/* Radios y checkboxes */
+.formulario input[type="radio"]:focus,
+.formulario input[type="checkbox"]:focus {
+    outline: 3px solid var(--botones--enlaces);
+    outline-offset: 2px;
+}

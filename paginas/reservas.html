@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas | Rueda Libre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
         <h1>Reserva tu Bicicleta</h1>
-        <ul>
-            <nav>
-                <li>Estas en Reservas</li>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tarifas.html">Tarifas</a></li>
-            </nav>
-        </ul>
+        <nav>
+            <ul id = "menu" class = "activo">
+                
+                    <li><a href="reservas.html">Estas en Reservas</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="tarifas.html">Tarifas</a></li>
+                
+            </ul>
+        </nav>
     </header>
 
     <main>
 
-        <form action ="" method = "post">
-            <fieldset>
+        <form action ="" method = "post" class="formulario">
+            <fieldset >
                 <legend>Tus datos</legend>
                     <p><label for = "nombre">Nombre completo:</label></p>
                     <input type = "text" id = "nombre" name = "nombre" minlength="3" required>
@@ -32,7 +41,7 @@
                     <input type = "tel" id = "celular" name = "telefono" pattern = "3[0-9]{9}" required >    
             </fieldset>
 
-            <fieldset>
+            <fieldset >
                 <legend>Reserva</legend>
                     <p><label for = "fecha">Fecha de reserva:</label></p>
                     <input type = "date" id = "fecha" name = "fecha" min = "2026-11-01" max = "2026-12-31" required>
@@ -61,7 +70,7 @@
                     <legend>Politicas de aceptación y confirmación</legend>
                     <p><label for = "aceptacion">Acepto los términos y condiciones</label></p>
                     <p><input type = "radio" id = "aceptacion" name = "aceptacion" value = "acepto" required> Sí, acepto</p>
-                    <button type = "submit">Confirmar Reserva</button>
+                    <a href="reservas.html" type = "submit" class = "cta-boton">Reserva ahora</a>
                 </fieldset>
                     
         </form>

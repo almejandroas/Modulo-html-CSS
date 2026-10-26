@@ -94,3 +94,144 @@ body{
     outline: 3px solid var(--botones--enlaces);
     outline-offset: 2px;
 }
+:root {
+    --espacio-xs: 0.25rem;
+    --espacio-sm: 0.5rem;
+    --espacio-md: 1rem;
+    --espacio-lg: 1.5rem;
+    --espacio-xl: 2rem;
+
+
+    --radio: 0.5rem;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+main,header,footer {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: var(--espacio-md);
+}
+
+
+.portada {
+    min-height: 60vh;
+}
+
+
+.servicio {
+    padding: var(--espacio-md);
+    border: 1px solid var(--titulos--encabezados);
+    border-radius: var(--radio);
+    background-color: var(--texto--secundario);
+    margin-bottom: var(--espacio-lg);
+}
+
+.servicio img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radio);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: var(--espacio-sm) var(--espacio-md);
+    border: 1px solid var(--texto--secundario);
+    text-align: left;
+}
+
+th {
+    background-color: var(--texto--secundario);
+    color: var(--titulos--encabezados);
+}
+
+
+.formulario fieldset {
+    margin-bottom: var(--espacio-lg);
+    padding: var(--espacio-md);
+    border: 1px solid var();
+    border-radius: var(--radio);
+}
+
+.formulario label {
+    display: block;               
+    margin-bottom: var(--espacio-xs);
+    font-weight: 600;
+}
+
+.formulario input:not([type="radio"]):not([type="checkbox"]),
+.formulario select,
+.formulario textarea {
+    width: 100%;                 
+}
+
+.cta-boton {
+    display: inline-block;
+    padding: var(--espacio-md) var(--espacio-xl);
+    color: var(--texto--secundario);
+    border: none;
+    border-radius: var(--radio);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 6. Menú en fila */
+.menu ul {
+    display: flex;
+    gap: var(--espacio-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    display:block;
+    widht: 100rem;
+    margin: 0 auto;
+
+}
+
+.tarjetas {
+  background-color: #ffff;
+  border-radius: 8px;                 
+  padding: 10px;
+  width: 900px;    
+  display: block;
+  margin: 2rem;              
+  transition: transform 0.2s ease; }
+
+  header{
+    display: block;
+    background-color: #F39A2B;
+    padding: 0.5rem;
+    width: 200rem;
+    border-radius: 1rem;
+    transition: transform 0.2s ease;
+  }
+
+  footer{
+    display: block;
+    background-color: #F39A2B;
+    padding: 0.5rem;
+    width: 200rem;
+    border-radius: 1rem;
+    transition: transform 0.2s ease;
+  }
+
+  .nuevo {
+  position: relative; /* Obligatorio: evita que la etiqueta se salga de la tarjeta */
+
+}

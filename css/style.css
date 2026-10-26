@@ -114,7 +114,7 @@ body{
 
 
 main,header,footer {
-    max-width: 60rem;
+    max-width: 100%;
     margin: 0 auto;
     padding: var(--espacio-md);
 }
@@ -188,18 +188,11 @@ th {
     cursor: pointer;
 }
 
-/* 6. Menú en fila */
-.menu ul {
-    display: flex;
-    gap: var(--espacio-md);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+
+
 img {
     max-width: 100%;
     display:block;
-    widht: 100rem;
     margin: 0 auto;
 
 }
@@ -226,7 +219,7 @@ img {
     display: block;
     background-color: #F39A2B;
     padding: 0.5rem;
-    width: 200rem;
+    max-width: 100%;
     border-radius: 1rem;
     transition: transform 0.2s ease;
   }
@@ -234,4 +227,23 @@ img {
   .nuevo {
   position: relative; /* Obligatorio: evita que la etiqueta se salga de la tarjeta */
 
+}
+
+header{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }

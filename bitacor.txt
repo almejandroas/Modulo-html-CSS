@@ -114,3 +114,10 @@ propiedades que se heredan
 especificidad: menu (1,0,1) - activo (0,1,0)
 el problema de que no se active la clase, es que el menu como es un id, tiene prioridad, la solución es ser más especificos
 hora de utilizar la clase #menu a.activo{}
+
+
+
+dia 1 semana 2
+
+en el encabezado y el pie de pagina, el menu y el titulo, siguen a la pagina, dependiendo del tamaño
+que se le de.

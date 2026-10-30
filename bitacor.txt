@@ -123,3 +123,16 @@ dia 1 semana 2
 que se le de.
 
 2. con 1280 px se ven 3 columnas, con 900px se ven 2 columnas, con 500 px se ve 1 columna.
+
+3. el grid template column, ayuda demasiado a reorganizar dos tipos de información util
+a la hora de ocupar un espacio, pero para poderse utilizar, se toco dividir 
+los diferentes clases individuales capturadas por un contenedor que modificaba su espacio.
+
+4. como en un principio fue 2fr 1fr en el template column, entonces no realizaba la acción en ninguna
+de las diferentes pantallas, se soluciona realizando el first mobile de 1 fr y despues en el @media se realiza
+lo deseado en las otras diferentes pantallas.  
+
+la tabla de tarifas se salia de la pantalla a los 360px, se soluciona reduciendo los pading de las celdas.
+
+Las imagenes se salían del 360px, pero se solucionan dandole un max-width de 100% y su height se acomoda en modo auto.
+

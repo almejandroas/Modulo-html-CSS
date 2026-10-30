@@ -228,9 +228,9 @@ article p {
 /* Contenedor principal de reservas en medida 2:1 */
 #direccion {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
-    align-items: start;
+    align-items: center;
 }
 
 .tarjeta-contacto{
@@ -270,4 +270,79 @@ article p {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ESTILOS BASE (Móvil: Menú debajo y centrado) */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #F39A2B;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 0.5rem;
+    list-style: none;
+}
+
+/* TABLET Y ESCRITORIO (Desde 768px en adelante) */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row; /* Vuelve a estar lado a lado */
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #menu {
+        margin-top: 0;
+    }
+}
+
+/* Estilos base móviles para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem; /* Letra más compacta para móvil */
+}
+
+th, td {
+    padding: 0.4rem 0.6rem; /* Relleno reducido para que quepa todo */
+    border: 1px solid var(--texto--secundario);
+    text-align: left;
+}
+
+/* --- TABLET (Mínimo 768px) --- */
+@media (min-width: 768px) {
+    .portada {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+}
+
+/* --- ESCRITORIO (Mínimo 1200px) --- */
+@media (min-width: 1200px) {
+    /* Aquí activamos el diseño 2:1 que querías para reservas */
+    #direccion {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
 }

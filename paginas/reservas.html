@@ -16,80 +16,108 @@
     <header>
         <h1>Reserva tu Bicicleta</h1>
         <nav>
-            <ul id = "menu" class = "activo">
-                
-                    <li><a href="reservas.html">Estas en Reservas</a></li>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="tarifas.html">Tarifas</a></li>
-                
+            <ul id="menu" class="activo">
+                <li><a href="reservas.html">Estas en Reservas</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tarifas.html">Tarifas</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        
+        <section id="direccion">
+            
+           
+            <div class="juntar">
+                <form action="" method="post" class="formulario">
+                    <fieldset>
+                        <legend>Tus datos</legend>
+                        <section class = "linea">
+                            <div class="campo">
+                            <p><label for="nombre">Nombre completo:</label></p>
+                            <input type="text" id="nombre" name="nombre" minlength="3" required>  
+                            </div>
+                            <div class="campo">
+                            <p><label for="identificacion">Numero de documento: </label></p>
+                            <input type="text" id="identificacion" name="identificacion" pattern="[0-9]{6,10}" required>
+                            </div>
+                        </section>
+                        
+                        <p><label for="correo">Correo electrónico:</label></p>
+                        <input type="email" id="correo" name="correo" required>
+                        
+                        <p><label for="celular">Celular:</label></p>
+                        <input type="tel" id="celular" name="telefono" pattern="3[0-9]{9}" required>    
+                    </fieldset>
 
-        <form action ="" method = "post" class="formulario">
-            <fieldset >
-                <legend>Tus datos</legend>
-                    <p><label for = "nombre">Nombre completo:</label></p>
-                    <input type = "text" id = "nombre" name = "nombre" minlength="3" required>
-                    <p><label for = "identificacion">Numero de documento: </label></p>
-                    <input type = "text" id = "identificacion" name = "identificacion" pattern = "[0-9]{6,10}" required>
-                    <p><label for = "correo">Correo electrónico::</label></p>
-                    <input type = "email" id = "correo" name = "correo" required>
-                    <p><label for = "celular">Celular:</label></p>
-                    <input type = "tel" id = "celular" name = "telefono" pattern = "3[0-9]{9}" required >    
-            </fieldset>
+                    <fieldset>
+                        <legend>Reserva</legend>
+                        <p><label for="fecha">Fecha de reserva:</label></p>
+                        <input type="date" id="fecha" name="fecha" min="2026-11-01" max="2026-12-31" required>
+                        
+                        <p><label>Tipo de bicicleta:</label></p>
+                        <p><input type="radio" id="bici-urbana" name="bicicleta" value="urbana" required> Urbana</p>
+                        <p><input type="radio" id="bici-montana" name="bicicleta" value="montaña" required> Montaña</p>
+                        <p><input type="radio" id="bici-electrica" name="bicicleta" value="eléctrica" required> Eléctrica</p>
+                        
+                        <p><label>Plan:</label></p>
+                        <p><input type="radio" id="plan-hora" name="plan" value="hora" required> 1 hora</p>
+                        <p><input type="radio" id="plan-medio" name="plan" value="medio" required> medio día</p>
+                        <p><input type="radio" id="plan-completo" name="plan" value="completo" required> día completo</p>
+                        
+                        <p><label for="cantidad">¿Cantidad de bicicletas?:</label></p>
+                        <input type="number" id="cantidad" name="cantidad" min="1" max="6" required>
+                        
+                        <p><label for="recorrido">Recorrido guiado:</label></p>
+                        <select id="recorrido" name="recorrido" required>
+                            <option value="ninguno">Ninguno</option>
+                            <option value="rio">rio y parques</option>
+                            <option value="barrio">Sabores del barrio</option>
+                            <option value="reto">Reto Palmas</option>  
+                        </select>
+                        
+                        <p><label for="comentarios">Comentarios:</label></p>
+                        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+                    </fieldset>
 
-            <fieldset >
-                <legend>Reserva</legend>
-                    <p><label for = "fecha">Fecha de reserva:</label></p>
-                    <input type = "date" id = "fecha" name = "fecha" min = "2026-11-01" max = "2026-12-31" required>
-                    <p><label for = "bicicleta">Tipo de bicicleta:</label></p>
-                    <p><input type = "radio" id = "bicicleta" name = "bicicleta" value = "urbana" required>Urbana</p>
-                    <p><input type = "radio" id = "bicicleta" name = "bicicleta" value = "montaña" required>Montaña</p>
-                    <p><input type = "radio" id = "bicicleta" name = "bicicleta" value = "eléctrica" required>Eléctrica</p>
-                    <p><label for = "plan">plan:</label></p>
-                    <p><input type = "radio" id = "plan" name = "plan" value = "hora" required>1 hora</p>
-                    <p><input type = "radio" id = "plan" name = "plan" value = "medio" required>medio día</p>
-                    <p><input type = "radio" id = "plan" name = "plan" value = "completo" required>día completo</p>
-                    <p><label for = "cantidad"> ¿Cantidad de bicicletas?:</label></p>
-                    <input type = "number" id = "cantidad" name = "cantidad" min = "1" max = "6" required>
-                    <p><label for = "recorrido">Recorrido guiado:</label></p>
-                    <select id = "recorrido" name = "recorrido" required>
-                        <option value = "ninguno">Ninguno</option>
-                        <option value = "rio">rio y parques</option>
-                        <option value = "barrio">Sabores del barrrio</option>
-                        <option value = "reto">Reto Palmas</option>  
-                    </select>
-                    <p><label for = "comentarios">Comentarios:</label></p>
-                    <textarea id = "comentarios" name = "comentarios" rows = "4" cols = "50"></textarea>
-                </fieldset>
+                    <fieldset> 
+                        <legend>Politicas de aceptación y confirmación</legend>
+                        <p><label>Acepto los términos y condiciones</label></p>
+                        <p><input type="radio" id="aceptacion" name="aceptacion" value="acepto" required> Sí, acepto</p>
+                        <button type="submit" class="cta-boton">Reserva ahora</button>
+                    </fieldset>
+                    <p>En este lugar puedes realizar tus reservas</p>
+                </form>
+            </div>
 
-                <fieldset> 
-                    <legend>Politicas de aceptación y confirmación</legend>
-                    <p><label for = "aceptacion">Acepto los términos y condiciones</label></p>
-                    <p><input type = "radio" id = "aceptacion" name = "aceptacion" value = "acepto" required> Sí, acepto</p>
-                    <a href="reservas.html" type = "submit" class = "cta-boton">Reserva ahora</a>
-                </fieldset>
-                    
-        </form>
+           
+            <section class="tarjetas-contacto">
+                <article class="tarjetas">
+                    <h2>Contacto</h2>
+                    <p>Escribenos a nuestro número <a href="tel:3232020302">3232020302</a></p>
+                    <p>escribenos en nuestro correo <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
+                </article>
+            </section>
+        </section>
 
-        <p>En este lugar puedes realizar tus reservas</p>
-        <h2>Horario de Atencion</h2>
-        <aside aria-label="contenido complementario">
-            <ul>
-                <li>Lunes a viernes: 7:00 a. m. a 7:00 p. m.</li>
-                <li>Sábados, domingos y festivos: 6:00 a. m. a 2:00 p. m.</li>
-            </ul>
-        </aside>
+                <h2>Horario de Atencion</h2>
+                <aside aria-label="contenido complementario">
+                    <ul>
+                        <li>Lunes a viernes: 7:00 a. m. a 7:00 p. m.</li>
+                        <li>Sábados, domingos y festivos: 6:00 a. m. a 2:00 p. m.</li>
+                    </ul>
+                </aside>
+            
+
+        
     </main>
 
-        <footer>
-           <p>Rueda libre
-            comunicate <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
-            2016
-            </p>
-        </footer>
+    <footer>
+       <p>Rueda libre
+       comunicate <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+       2016
+       </p>
+    </footer>
 </body>
 </html>

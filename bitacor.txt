@@ -119,5 +119,7 @@ hora de utilizar la clase #menu a.activo{}
 
 dia 1 semana 2
 
-en el encabezado y el pie de pagina, el menu y el titulo, siguen a la pagina, dependiendo del tamaño
+1 .en el encabezado y el pie de pagina, el menu y el titulo, siguen a la pagina, dependiendo del tamaño
 que se le de.
+
+2. con 1280 px se ven 3 columnas, con 900px se ven 2 columnas, con 500 px se ve 1 columna.
